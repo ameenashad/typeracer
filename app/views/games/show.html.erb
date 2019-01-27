@@ -1,0 +1,12 @@
+<p>
+  <%= @paragraph.text %>
+</p>
+
+Write here!!!
+<%= text_field_tag :text %>
+
+<%= form_for @game_player do |f| %>
+  <%#= f.hidden_field :end, DateTime.now %>
+  <%= f.submit %>
+<% end %>
+

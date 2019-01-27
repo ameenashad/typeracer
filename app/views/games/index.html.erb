@@ -1,0 +1,11 @@
+<% if player_signed_in? %>
+  <%= form_for @game do |f| %>
+    <%= f.submit 'Start' %>
+  <% end %>
+  <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
+<% else %>
+  <div>
+    <%= link_to 'Sign In', player_session_path %> |
+    <%= link_to 'Sign Up', new_player_registration_path %>
+  </div>
+<% end %>

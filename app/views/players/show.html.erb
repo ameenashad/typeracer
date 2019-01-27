@@ -1,0 +1,12 @@
+<% if player_signed_in? %>
+  <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
+<% else %>
+  <div>
+    <%= link_to 'Sign In', player_session_path %> |
+    <%= link_to 'Sign Up', new_player_registration_path %>
+  </div>
+<% end %>
+
+Email: <%= @player.email %>
+start: <%= @gameplayer.start_time %>
+end: <%= @gameplayer.end_time %>
